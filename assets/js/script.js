@@ -150,11 +150,14 @@ var COMMENT_API_URL = "https://script.google.com/macros/s/AKfycby_t4EvNTiUJoOcZD
 
         var welSwiperMain = $(sSwiperMainSelector);
         var welSwiperThumbnail = $(sSwiperThumbnailSelector);
+        var welCurrentIndex = $('._current-index');
 
         // init swiper-slide images
         var imageCount = 1;
 
         var initSwiper = function () {
+            welCurrentIndex.text(1);
+            $('._total-number').text(imageCount - 1);
             var swiper_thumbnail = new Swiper(".swiper_thumbnail", {
                 slidesPerView: 5,
                 spaceBetween: 10,
@@ -172,7 +175,15 @@ var COMMENT_API_URL = "https://script.google.com/macros/s/AKfycby_t4EvNTiUJoOcZD
                 thumbs: {
                     swiper: swiper_thumbnail,
                 },
-            })
+                on : {
+                    slideChange: function (index) {
+                        welCurrentIndex.text(index.realIndex + 1);
+                        console.log(index);
+                    }
+                }
+            });
+
+
         };
 
         var initGalleryImages = function () {
@@ -255,7 +266,7 @@ var COMMENT_API_URL = "https://script.google.com/macros/s/AKfycby_t4EvNTiUJoOcZD
         = COUNTDOWN CLOCK
     -------------------------------------------*/
     if ($("#clock").length) {
-        $('#clock').countdown('2023/12/16', function (event) {
+        $('#clock').countdown('2023/12/16 14:30:00', function (event) {
             var $this = $(this).html(event.strftime(''
                 + '<div class="box"><div>%D</div> <span>Days</span> </div>'
                 + '<div class="box"><div>%H</div> <span>Hours</span> </div>'

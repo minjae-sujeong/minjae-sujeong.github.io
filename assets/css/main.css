@@ -912,6 +912,20 @@ img {
     opacity: 1;
 }
 
+.gallery-index-area {
+    text-align: center;
+    margin-top: 15px;
+    font-family: Pretendard-SemiBold;
+}
+
+.gallery-index-area .current-index {
+    color: #4A5AE0;
+}
+
+.gallery-index-area .total-number {
+    color: #000000;
+}
+
 .contact-icon-style {
     width: 30px;
     height: 30px;

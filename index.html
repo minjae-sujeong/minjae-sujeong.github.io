@@ -99,7 +99,7 @@
     </header>
     <!-- end of header -->
 
-    <section id="home" class="main-wedding-view aos-init aos-animate" data-aos-easing="linear" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="50">
+    <section id="home" class="main-wedding-view">
         <div class="swiper-container swiper-container-horizontal swiper-container-ios">
             <div class="swiper-wrapper">
                 <div style="width: 100%;">
@@ -328,12 +328,12 @@
                 </div>
             </div>
 
-            <div id="swiperGallery" class="row" data-aos-easing="linear" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="50">
+            <div id="swiperGallery" class="row">
                 <div class="swiper swiper_main _swiper_main">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper _swiper-wrapper"></div>
                     <!-- If we need pagination -->
-                    <!--                        <div class="swiper-pagination"></div>-->
+<!--                    <div class="swiper-pagination"></div>-->
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
@@ -346,19 +346,22 @@
                     <div class="swiper-wrapper _swiper-wrapper"></div>
                 </div>
             </div>
+            <div class="inner gallery-index-area">
+                <span><span class="current-index _current-index"></span> / <span class="total-number _total-number"></span></span>
+            </div>
         </div> <!-- end container -->
     </section>
     <!-- end gallery-section -->
 
 
     <!-- start contact-section -->
-    <section id="location" class="section-padding p-t-0" >
-        <div class="container" >
+    <section id="location" class="section-padding p-t-0"  data-aos-easing="linear" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="50">
+        <div class="container">
             <div class="row" >
                 <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                    <div class="section-title">
+                    <div class="section-title" >
                         <h2>오시는 길</h2>
-                        <h3 style="font-size: 20px">신도림 테크노마트 7층 <br>웨스턴베니비스</h3>
+                        <h3 style="font-size: 20px">신도림 테크노마트 7층 <br>웨스턴베니비스 다이너스티 홀</h3>
                         <h4 style="font-size: 16px">서울 구로구 새말로 97, 구로동 3-25</h4>
                     </div>
                 </div>
@@ -449,7 +452,7 @@
     </section>
     <!-- end contact-section -->
 
-    <section id="account" class=" section-padding p-t-0" >
+    <section id="account" class=" section-padding p-t-0" data-aos-easing="linear" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="50" >
         <div class="container">
             <div class="row">
                 <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
@@ -1000,10 +1003,13 @@
         src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=5092f85949e8e3358403406a4e4e9fdd"></script>
 <script src="assets/js/kakao.min.js"></script>
 <script src="assets/js/aos.js"></script>
+
+<script src="assets/js/script.js"></script>
+
 <script>
     AOS.init();
+    window.addEventListener('load', AOS.refresh);
 </script>
-<script src="assets/js/script.js"></script>
 
 <input id="clipBoardInput" type="text" value="" style="position:absolute;top:-9999em;" readonly="">
 </body>
