@@ -178,7 +178,6 @@ var COMMENT_API_URL = "https://script.google.com/macros/s/AKfycby_t4EvNTiUJoOcZD
                 on : {
                     slideChange: function (index) {
                         welCurrentIndex.text(index.realIndex + 1);
-                        console.log(index);
                     }
                 }
             });
@@ -187,8 +186,8 @@ var COMMENT_API_URL = "https://script.google.com/macros/s/AKfycby_t4EvNTiUJoOcZD
         };
 
         var initGalleryImages = function () {
-            var nMaxSize = 10;
-            $(`<img src="assets/images/gallery/pic-${imageCount++}.jpg">`)
+            var nMaxSize = 12;
+            $(`<img src="assets/images/gallery/final-pic-${imageCount++}.jpg">`)
                 .load(function (e) {
                     var welImage = $(e.target);
                     welSwiperMain.find('._swiper-wrapper').append($('<div class="swiper-slide"></div>')
