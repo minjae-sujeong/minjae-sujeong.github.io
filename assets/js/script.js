@@ -373,7 +373,7 @@ var COMMENT_API_URL = "https://script.google.com/macros/s/AKfycby_t4EvNTiUJoOcZD
                 content: {
                     title: '김민재 ♡ 김수정 결혼합니다.',
                     description: '2023년 12월 16일 토요일 오후 2시 30분\n신도림 웨스턴베니비스 7층',
-                    imageUrl: sUrl + "assets/images/slider/slide-1.jpg", //이미지는 업로드 후에 올리기
+                    imageUrl: sUrl + "/assets/images/gallery/final-pic-3.jpg",
                     link: {
                         mobileWebUrl: sUrl,
                         webUrl: sUrl
